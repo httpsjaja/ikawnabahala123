@@ -1,0 +1,124 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.login-container,
+.signup-container,
+.recover-container,
+.reset-container,
+.dashboard-container {
+    width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 100px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container label,
+.signup-container label {
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;  /* Adjust button width to full for better consistency */
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    display: block;
+}
+
+button:hover {
+    background-color: darkblue;  /* Fixed missing colon for hover effect */
+}
+
+.recover-container button {
+    width: 100%;  /* Full width for recover container buttons */
+    padding: 10px;
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.recover-container h2 {
+    text-align: left;
+}
+
+.recover-container h3 {
+    text-align: center;
+    font-weight: normal;
+}
+
+.links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    color: black;
+}
+
+.links a[href="recover.php"] {
+    color: blue;  /* Specific style for recover link */
+}
+
+.blue-text {
+    color: blue;
+}
+
+.red-text {
+    color: rgb(13, 0, 255);  /* Updated for clarity, 'rgb(13, 0, 255)' is actually blue */
+}
+
+/* Fixed button in login-container */
+.login-container button {
+    width: 100%;             /* Full width for better layout */
+    padding: 10px;           /* Add padding for height and clickability */
+    background-color: blue;  /* Blue background color */
+    color: white;            /* White text color */
+    border: none;            /* No border */
+    border-radius: 4px;      /* Slightly rounded corners */
+    cursor: pointer;         /* Change cursor to pointer on hover */
+    font-size: 16px;         /* Adjust font size for readability */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    text-align: center;      /* Center the text */
+    display: block;          /* Block display for better alignment */
+}
+
+.links a[href="adminrecover.php"] {
+    color: blue;  /* Specific style for recover link */
+}
+.link {
+    text-align: center; /* Center aligns the text inside this container */
+}
+
+.link a {
+    color: blue;
+    text-underline-offset: 2px; /* Adjust this value as needed */
+}

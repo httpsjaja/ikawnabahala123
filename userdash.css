@@ -1,0 +1,606 @@
+/* Reset basic styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+/* Horizontal line styling */
+.horizontal-line {
+    height: 2px;                  /* Set the height of the line */
+    background-color: black;      /* Set the color of the line */
+    width: 100%;                  /* Set the width of the line */
+    margin: 20px 0;               /* Add vertical margin */
+}
+
+/* Sidebar styling */
+.sidebar {
+    position: relative;           /* Ensure positioning for contained elements */
+    padding: 1rem;               /* Add padding around the sidebar */
+}
+
+/* Button container aligned vertically at the top-left corner */
+.btnn-container {
+    display: flex;
+    flex-direction: column;       /* Stack buttons vertically */
+    align-items: flex-start;      /* Align to the left */
+    gap: 1rem;                    /* Space between buttons */
+    position: absolute;           /* Enable precise positioning */
+    top: 100px;                    /* Position below the heading */
+    left: 1rem;                   /* Align container to the left */
+}
+
+/* Button styling */
+.btnn {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem 2rem;          /* Adjust padding for balance */
+    width: 12rem;                /* Button width */
+    border-radius: 0.5rem;       /* Rounded corners */
+    border: rgb(53, 53, 53) 0.1rem solid; /* Border styling */
+    font-size: 1rem;             /* Text size */
+}
+
+/* Button container aligned vertically at the top-right corner */
+.btn1-container {
+    display: flex;
+    flex-direction: column;       /* Stack buttons vertically */
+    align-items: flex-start;      /* Align to the left */
+    gap: 1rem;                    /* Space between buttons */
+    position: absolute;           /* Enable precise positioning */
+    top: 100px;                    /* Position below the heading */
+    right: 1rem;                  /* Align container to the right */
+}
+
+
+/* Button styling for second container */
+.btn1 {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem 2rem;          /* Adjust padding for balance */
+    width: 12rem;                /* Button width */
+    border-radius: 0.5rem;       /* Rounded corners */
+    border: rgb(53, 53, 53) 0.1rem solid; /* Border styling */
+    font-size: 1rem;    
+}
+/* General hover effects for all buttons */
+.btnn-color-2:hover,
+.btnn-color-3:hover,
+.btn1-color-4:hover,
+.btn1-color-5:hover {
+    cursor: pointer;                /* Change cursor on hover */
+    background: rgb(53, 53, 53);   /* Background color on hover */
+    color: white;                  /* Text color on hover */
+    border: rgb(255, 255, 255) 0.1rem solid; /* Border color on hover */
+}
+
+/* Button 2 base styles */
+.btnn-color-2 {
+    background: none;              /* No background */
+}
+
+/* Button 3 base styles */
+.btnn-color-3 {
+    background: none;              /* No background */
+}
+
+/* Button 4 base styles */
+.btn1-color-4 {
+    background: none;              /* No background */
+}
+
+/* Button 5 base styles */
+.btn1-color-5 {
+    background: none;              /* No background */
+}
+
+/* Optional: If you want to explicitly ensure the same styles for btn1 buttons when not hovered */
+.btn1-color-4,
+.btn1-color-5 {
+    background: none;              /* No background */
+}
+
+
+
+
+/* Main content styling */
+main {
+    margin: 0;                   /* Remove default margin */
+    height: 100vh;               /* Full height of the viewport */
+    display: flex;               /* Use flexbox */
+    justify-content: center;      /* Center horizontally */
+    align-items: flex-start;     /* Align items at the top */
+    margin-top: 20px;            /* Add space from the top */
+}
+
+/* Search bar styling */
+.search-bar {
+    display: flex;               /* Use flexbox for alignment */
+    align-items: center;         /* Center items vertically */
+    margin-top: 20px;           /* Space from the top */
+}
+
+.search-bar input {
+    width: 300px;               /* Width of the input field */
+    padding: 10px;              /* Padding inside the input field */
+    font-size: 16px;            /* Font size for the input text */
+    border: 1px solid #ccc;     /* Border for the input field */
+    border-radius: 4px;         /* Rounded corners for the input field */
+}
+
+.search-bar button {
+    padding: 10px 20px;         /* Padding inside the button */
+    margin-left: 10px;          /* Space between input and button */
+    background-color: blue;     /* Button background color */
+    color: white;                /* Button text color */
+    border: none;                /* Remove border */
+    border-radius: 4px;         /* Rounded corners for the button */
+    cursor: pointer;             /* Change cursor on hover */
+}
+
+
+/* Main content styling */
+main {
+    margin: 0;                   /* Remove default margin */
+    height: auto;                /* Allow height to be dynamic */
+    display: center;               /* Use flexbox */
+    flex-direction: column;      /* Stack items vertically */
+    align-items: center;         /* Center items horizontally */
+    margin-top: 20px;            /* Add space from the top */
+}
+
+/* Table container styling */
+.table-container {
+    width: 100%;                 /* Full width for the table container */
+    max-width: 600px;           /* Optional: limit the width */
+    margin: 20px auto;          /* Space above the table and center horizontally */
+    display: flex;               /* Use flexbox for alignment */
+    flex-direction: column;      /* Stack items vertically */
+    align-items: center;         /* Center the table horizontally */
+}
+
+/* Uploaded Recipes heading styling */
+.table-container h2 {
+    text-align: center;          /* Center the heading */
+}
+
+/* Recipe Table styling */
+#recipeTable {
+    width: 100%;                 /* Full width for the table */
+    border-collapse: collapse;   /* Optional: for better border styling */
+}
+
+#recipeTable th, #recipeTable td {
+    text-align: center;          /* Center text in cells */
+    padding: 10px;               /* Add padding for better spacing */
+}
+
+#recipeTable th {
+    background-color: #f2f2f2;   /* Optional: background color for headers */
+}
+/* Add this to your userdash.css file */
+
+/* Add this to your userdash.css file */
+
+.logout-container {
+    position: absolute; /* Use absolute positioning */
+    top: 20px; /* Position it 20px from the top */
+    right: 20px; /* Position it 20px from the right */
+    /* Optional: To prevent overlap with other elements */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.logout-btn {
+    background-color: #ff4c4c; /* Red color for the logout button */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px; /* Add some padding */
+    cursor: pointer;
+    font-size: 16px; /* Increase font size */
+}
+
+.logout-btn:hover {
+    background-color: #e63939; /* Darker red on hover */
+}
+/* Search bar styling */
+.search-bar {
+    display: flex;               /* Use flexbox for alignment */
+    align-items: center;         /* Center items vertically */
+    margin-top: 20px;           /* Space from the top */
+}
+
+/* Input field styling */
+.search-bar input {
+    width: 300px;               /* Width of the input field */
+    padding: 10px;              /* Padding inside the input field */
+    font-size: 16px;            /* Font size for the input text */
+    border: 1px solid #ccc;     /* Border for the input field */
+    border-radius: 4px;         /* Rounded corners for the input field */
+    transition: border-color 0.3s; /* Transition for border color on focus */
+}
+
+/* Change border color on focus */
+.search-bar input:focus {
+    border-color: blue;         /* Blue border when focused */
+    outline: none;              /* Remove default outline */
+}
+
+/* Button styling */
+.search-bar button {
+    padding: 10px 20px;         /* Padding inside the button */
+    margin-left: 10px;          /* Space between input and button */
+    background-color: blue;     /* Button background color */
+    color: white;                /* Button text color */
+    border: none;                /* Remove border */
+    border-radius: 4px;         /* Rounded corners for the button */
+    cursor: pointer;             /* Change cursor on hover */
+    transition: background-color 0.3s; /* Transition for background color on hover */
+}
+
+/* Button hover effect */
+.search-bar button:hover {
+    background-color: darkblue; /* Darker blue on hover */
+}
+
+/* Center the search bar horizontally on the page */
+.search-bar {
+    display: flex;                      /* Use flexbox for alignment */
+    justify-content: center;            /* Center items horizontally */
+    align-items: center;                /* Center items vertically */
+    margin: 20px auto;                 /* Center the search bar with vertical spacing */
+}
+
+/* Input field styling */
+.search-bar input {
+    width: 300px;                      /* Width of the input field */
+    padding: 10px;                     /* Padding inside the input field */
+    font-size: 16px;                   /* Font size for the input text */
+    border: 1px solid #ccc;            /* Border for the input field */
+    border-radius: 4px;                /* Rounded corners for the input field */
+    transition: border-color 0.3s;     /* Transition for border color on focus */
+}
+
+/* Change border color on focus */
+.search-bar input:focus {
+    border-color: blue;                /* Blue border when focused */
+    outline: none;                     /* Remove default outline */
+}
+
+/* Button styling */
+.search-bar button {
+    padding: 10px 20px;                /* Padding inside the button */
+    margin-left: 10px;                 /* Space between input and button */
+    background-color: blue;            /* Button background color */
+    color: white;                       /* Button text color */
+    border: none;                       /* Remove border */
+    border-radius: 4px;                /* Rounded corners for the button */
+    cursor: pointer;                    /* Change cursor on hover */
+    transition: background-color 0.3s; /* Transition for background color on hover */
+}
+
+/* Button hover effect */
+.search-bar button:hover {
+    background-color: darkblue;        /* Darker blue on hover */
+}
+.container {
+    display: flex;                      /* Use flexbox for alignment */
+    flex-direction: column;             /* Stack items vertically */
+    align-items: center;                /* Center items horizontally */
+    margin-top: 5rem;                  /* Margin from the top, adjust as necessary */
+}
+
+.container h2 {
+    text-align: center;                 /* Center the text */
+    margin-bottom: 20px;               /* Space below the heading */
+}
+
+
+
+/* Adjust the container for uploaded recipes */
+.container {
+    margin-top: 0;              /* Remove any unnecessary top margin */
+    padding-top: 60px;          /* Add padding at the top if needed */
+}
+
+/* Adjust the recipe card layout */
+.recipe-card {
+    margin-bottom: 1rem;       /* Space between the cards */
+}
+
+/* Card styling */
+.card {
+    border-radius: 0.5rem;         /* Rounded corners for the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for better appearance */
+}
+
+/* Ensure the images fit properly */
+.card-img-top {
+    height: 200px;
+    object-fit: cover;             /* Make sure the image fits properly */
+}
+
+/* Adjust the card body layout */
+.card-body {
+    padding: 1rem;                 /* Padding inside card */
+    text-align: center;            /* Center content */
+}
+
+/* Horizontal margin for the recipe container */
+#recipeContainer {
+    margin-top: 0;               /* Ensure no additional margin */
+}
+
+/* Optional: Adjust the overall layout if there is a fixed sidebar */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Optional: Adjust the sidebar positioning */
+.sidebar {
+    position: relative;           /* Ensure positioning for contained elements */
+    padding: 1rem;                /* Add padding around the sidebar */
+}
+
+
+/* Button container aligned vertically at the left side */
+.btnn-container {
+    display: flex;
+    flex-direction: column;       /* Stack buttons vertically */
+    align-items: flex-start;      /* Align to the left */
+    gap: 1rem;                    /* Space between buttons */
+    position: absolute;
+    top: 100px;                    /* Adjust the position from top */
+    left: 1rem;                   /* Align container to the left */
+}
+
+/* Button container for Upload Recipe */
+.btn1-container {
+    display: flex;
+    flex-direction: column;       /* Stack buttons vertically */
+    align-items: flex-start;      /* Align to the left */
+    gap: 1rem;                    /* Space between buttons */
+    position: absolute;           /* Allow positioning */
+    top: 250px;                    /* Adjust position below Meal Planning */
+    left: 1rem;                   /* Align container to the left */
+}
+
+/* Button styling */
+.btnn, .btn1 {
+    font-weight: 600;
+    transition: all 300ms ease;
+    padding: 1rem 2rem;           /* Adjust padding for balance */
+    width: 12rem;                 /* Button width */
+    border-radius: 0.5rem;        /* Rounded corners */
+    border: rgb(53, 53, 53) 0.1rem solid; /* Border styling */
+    font-size: 1rem;              /* Text size */
+}
+
+/* Styling for hover effect on buttons */
+.btnn:hover, .btn1:hover {
+    cursor: pointer;
+    background: rgb(53, 53, 53);
+    color: white;
+    border: rgb(255, 255, 255) 0.1rem solid;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-left: 10px;
+}
+
+.button-container {
+    position: absolute; /* Allows precise placement */
+    top: 10px; /* Positions the container near the top */
+    right: 10px; /* Aligns the container to the right */
+    display: flex; /* Align buttons in a row */
+    gap: 10px; /* Adds spacing between the buttons */
+}
+
+.profile-container,
+.logout-btn {
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+/* Container for Profile and Logout buttons */
+.profile-logout-container {
+    display: flex;
+    justify-content: flex-start; /* Align items to the left */
+    align-items: center;         /* Vertically align buttons */
+    gap: 1rem;                   /* Space between the buttons */
+}
+
+/* Styling for the Profile button */
+.profile-container {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Styling for the dropdown button (icon) */
+.dropdown-btn {
+    font-size: 1.5rem;
+    color: rgb(10, 10, 10);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+/* Dropdown menu styling */
+.logout-dropdown {
+    position: relative; /* To position the dropdown content */
+}
+
+/* The dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 35px; /* Adjust based on the button height */
+    right: 0;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+}
+
+/* Show the dropdown content when the button is clicked */
+.logout-dropdown.show .dropdown-content {
+    display: block;
+}
+
+/* Styling for the Logout button inside the dropdown */
+.logout-btn {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Hover effect for both buttons */
+.profile-container:hover, .dropdown-btn:hover, .logout-btn:hover {
+    background-color: rgb(100, 100, 100);
+}
+
+
+/* Container for Profile and Logout buttons */
+.profile-logout-container {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;        /* Vertically align buttons */
+    position: absolute;
+    top: 10px;                  /* Position the container at the top */
+    right: 10px;                /* Align to the right edge */
+    gap: 1rem;                  /* Space between the buttons */
+}
+
+/* Styling for the Profile button */
+.profile-container {
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    background-color: rgb(53, 53, 53);
+    color: white;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+/* Dropdown container */
+.logout-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button (icon only) */
+.dropdown-btn {
+    background: none;       /* No background */
+    border: none;           /* No border */
+    font-size: 20px;        /* Icon size */
+    cursor: pointer;       /* Pointer cursor */
+    color: black;          /* Color of the icon */
+    padding: 0;             /* No padding */
+}
+
+/* Dropdown menu (hidden by default) */
+.dropdown-content {
+    display: none;          /* Hide dropdown by default */
+    position: absolute;
+    right: 0;
+    background-color: black; /* Black background */
+    min-width: 160px;        /* Set a min-width */
+    z-index: 1;             /* Ensure dropdown is on top */
+}
+
+/* Dropdown menu items */
+.dropdown-content button {
+    background: none;       /* No background for buttons */
+    border: none;           /* No border */
+    color: white;           /* White text */
+    padding: 10px 20px;     /* Padding inside buttons */
+    width: 100%;            /* Full width of dropdown */
+    text-align: left;       /* Align text to the left */
+    cursor: pointer;       /* Pointer cursor */
+}
+
+/* Show dropdown menu when hovering over the button */
+.logout-dropdown:hover .dropdown-content {
+    display: block;         /* Display the dropdown */
+}
+
+/* Optional: Change color of logout button on hover */
+.dropdown-content button:hover {
+    background-color: #333; /* Darker shade when hovering over logout button */
+}
+
+
+/* Adjusting the padding-top for the main container */
+main {
+    padding-top: 5px; /* Adjust the value as needed */
+}
+
+/* Alternatively, adjust the padding-top for the search-bar container */
+.search-bar {
+    padding-top: 15px; /* Adjust the value as needed */
+}
+
+/* Adjust padding for btnn-container */
+.btnn-container {
+    padding-top: 20px; /* Adjust the value as needed */
+    /* Other styling remains the same */
+}
+
+/* Adjust padding for btn1-container */
+.btn1-container {
+    padding-top: 20px; /* Adjust the value as needed */
+    /* Other styling remains the same */
+}
+
+/* Profile container styling */
+.profile-logout-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Profile button container */
+.profile-container {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile image styling (circular) */
+.profile-pic {
+    width: 50px;               /* Adjust size */
+    height: 50px;              /* Adjust size */
+    border-radius: 50%;        /* Make it circular */
+    object-fit: cover;         /* Ensure the image is cropped to fit */
+    border: 2px solid #ddd;    /* Optional: Add border around the image */
+}
+
+/* Optional: Hover effect */
+.profile-container:hover .profile-pic {
+    border-color: #007BFF;    /* Change border color on hover */
+}
