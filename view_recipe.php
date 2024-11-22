@@ -8,41 +8,33 @@ $connection = new mysqli($servername, $username, $password, $dbname);
 if ($connection->connect_error) {
     die("Connection failed: " . $connection->connect_error);
 }
-
 $recipeId = $_GET['id']; // Get recipe ID from URL
-
 // Fetch the full recipe details
 $sql = "SELECT * FROM recipeee WHERE id = $recipeId";
 $result = $connection->query($sql);
 $recipe = $result->fetch_assoc();
-
 // Handle rating submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['rating'])) {
     $rating = (int)$_POST['rating'];
     $insertRatingSql = "INSERT INTO ratings (recipe_id, rating) VALUES ($recipeId, $rating)";
     $connection->query($insertRatingSql);
 }
-
 // Handle comment submission
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['comment'])) {
     $comment = $connection->real_escape_string($_POST['comment']);
     $insertCommentSql = "INSERT INTO comments (recipe_id, comment) VALUES ($recipeId, '$comment')";
     $connection->query($insertCommentSql);
 }
-
 // Fetch the average rating for this recipe
 $averageRatingSql = "SELECT AVG(rating) AS average_rating FROM ratings WHERE recipe_id = $recipeId";
 $averageRatingResult = $connection->query($averageRatingSql);
 $averageRating = $averageRatingResult->fetch_assoc()['average_rating'];
-
 // Fetch all comments for this recipe
 $commentsSql = "SELECT * FROM comments WHERE recipe_id = $recipeId ORDER BY created_at DESC";
 $commentsResult = $connection->query($commentsSql);
-
 // Close the database connection
 $connection->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,7 +51,6 @@ $connection->close();
         <img src="<?= htmlspecialchars($recipe['image_path']) ?>" alt="<?= htmlspecialchars($recipe['dish_name']) ?>" style="max-width: 100%; height: auto;">
         <p><strong>Category:</strong> <?= htmlspecialchars($recipe['category']) ?></p>
         <p><strong>Recipe and Procedure:</strong><br><?= nl2br(htmlspecialchars($recipe['recipe'])) ?></p>
-
         <!-- Display the average rating as stars -->
         <p><strong>Average Rating:</strong> 
             <?php
@@ -67,7 +58,6 @@ $connection->close();
                 $fullStars = floor($averageRating);
                 $halfStar = ($averageRating - $fullStars) >= 0.5 ? 1 : 0;
                 $emptyStars = 5 - $fullStars - $halfStar;
-
                 for ($i = 0; $i < $fullStars; $i++) {
                     echo '<i class="fas fa-star"></i>';
                 }
@@ -83,7 +73,6 @@ $connection->close();
             }
             ?>
         </p>
-
         <!-- Rating form with star selection -->
         <form method="POST">
             <label for="rating">Rate this recipe:</label><br>
@@ -96,7 +85,6 @@ $connection->close();
             </div><br>
             <input type="submit" value="Submit Rating">
         </form>
-
         <!-- Comment section -->
         <h3>Comments:</h3>
         <?php
@@ -111,7 +99,6 @@ $connection->close();
             echo "<p>No comments yet.</p>";
         }
         ?>
-
         <!-- Add a comment -->
         <form method="POST">
             <label for="comment">Leave a comment:</label><br>
@@ -119,10 +106,8 @@ $connection->close();
             <input type="submit" value="Submit Comment">
         </form>
     </div>
-
     <!-- Back to Dashboard Button in Bottom Right -->
     <a href="userdash.php" class="back-to-dashboard-btn">Back to Dashboard</a>
-
     <!-- CSS to style stars, comments, and fixed button position -->
     <style>
         .back-to-dashboard-btn {
